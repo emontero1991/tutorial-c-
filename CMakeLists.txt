@@ -10,11 +10,9 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 
-
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES test
-
 )
 
 
@@ -24,10 +22,21 @@ include_directories(
 )
 
 
-add_executable(helloworld src/helloworld.cpp)
+add_executable(talker src/talker.cpp)
 
-add_dependencies(helloworld ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
-target_link_libraries(helloworld 
+
+
+add_dependencies(talker ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+
+
+
+target_link_libraries(talker
  ${catkin_LIBRARIES}
+
 )
+
+
+
+
