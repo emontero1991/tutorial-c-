@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+   
+
+        <!-- helloworld node file name:talker.cpp-->
+	<arg name="node_start_delay" default="0.0" />  
+	<node name="example" pkg="test" type="talker" respawn="false" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+	
+
+
+
+</launch>
